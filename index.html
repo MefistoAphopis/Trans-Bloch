@@ -5,103 +5,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRANS BLOCH Paweł Bloch - Profesjonalne Usługi Transportowe</title>
   <style>
-    /* RESET CSS (podstawowe wyzerowanie marginesów i paddingu) */
+    /* RESET CSS */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Stylowanie BODY z tłem */
+    /* Ustawienia dla całej strony */
     body {
       font-family: Arial, sans-serif;
-      color: #333;
+      color: #fff;
       line-height: 1.6;
-      /* Tutaj wstaw ścieżkę do swojego obrazu w tle */
       background: url("trans-bloch-bg.jpg") no-repeat center center fixed;
       background-size: cover;
     }
 
-    /* Główny kontener ze światłem wokół tekstu */
-    .container {
-      max-width: 900px;          /* maksymalna szerokość, by treść nie była zbyt rozciągnięta */
-      margin: 60px auto;         /* centrowanie poziome i większy margines z góry i dołu */
-      background-color: rgba(255, 255, 255, 0.95); 
-      padding: 40px;             /* wewnętrzne odstępy od krawędzi kontenera */
-      border-radius: 5px;        /* zaokrąglenie rogów kontenera */
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* delikatny cień, by oddzielić kontener od tła */
+    /* Animacja fadeIn */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    /* Wyśrodkowanie sekcji i nagłówków, ale tekst paragrafów wyrównany do lewej */
-    header, section, footer {
+    /* Kontener na całą zawartość z animacją */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
       text-align: center;
+      animation: fadeInUp 2s ease-out;
+    }
+
+    header {
       margin-bottom: 40px;
     }
-
     header h1 {
       margin-bottom: 10px;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
-
     header p {
       font-size: 1.2em;
       margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
+    section {
+      margin-bottom: 40px;
+      text-align: center;
+    }
     section h2, section h3 {
       margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
-
-    /* Dodajemy nieco więcej marginesu między akapitami */
-    p {
+    section p {
       margin-bottom: 20px;
-      text-align: left; /* Wyrównanie treści do lewej dla lepszej czytelności */
+      text-align: left;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
-
     ul {
       list-style: none;
       padding-left: 0;
-      text-align: left;
-      margin-left: 0;
       margin-bottom: 20px;
+      text-align: left;
     }
-
     li {
       margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
-    /* Styl dla sekcji kontaktowej – wyróżniona, ale dalej spójna z całością */
+    /* Sekcja Kontakt */
     .contact {
-      background: #efefef;
+      background: rgba(0, 0, 0, 0.5);
       padding: 20px;
       border-radius: 5px;
+      text-align: left;
       margin-bottom: 40px;
-    }
-    .contact p {
-      margin-bottom: 10px;
+      animation: fadeInUp 2s ease-out;
     }
     .contact a {
-      color: #333;
+      color: #fff;
       font-weight: bold;
       text-decoration: none;
     }
 
     footer p {
       font-size: 0.9em;
-      color: #777;
-      margin-bottom: 0;
+      color: #ddd;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     }
 
-    /* Responsywność – na ekranach mniejszych od 600px dodatkowo dostosowujemy marginesy i font-size */
+    /* Responsywność */
     @media (max-width: 600px) {
       .container {
         margin: 20px auto;
-        padding: 20px;
-      }
-      header, section, footer {
-        margin-bottom: 20px;
-      }
-      .contact {
         padding: 15px;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+      header p, section h2, section h3 {
+        font-size: 1em;
       }
     }
   </style>
@@ -116,17 +126,17 @@
     <section>
       <h2>O nas</h2>
       <p>
-        Witamy na stronie TRANS BLOCH Paweł Bloch – Twojego partnera w profesjonalnym transporcie.  
-        Jesteśmy indywidualną działalnością gospodarczą z siedzibą w Nowej Osuchowej, oferując kompleksowe  
+        Witamy na stronie TRANS BLOCH Paweł Bloch – Twojego partnera w profesjonalnym transporcie.
+        Jesteśmy indywidualną działalnością gospodarczą z siedzibą w Nowej Osuchowej, oferując kompleksowe
         usługi transportowe dostosowane do potrzeb zarówno klientów indywidualnych, jak i firm.
       </p>
       <h3>Dlaczego warto wybrać TRANS BLOCH Paweł Bloch?</h3>
       <ul>
-        <li><strong>Bezpieczeństwo i terminowość:</strong> Nasze wieloletnie doświadczenie w branży transportowej  
+        <li><strong>Bezpieczeństwo i terminowość:</strong> Nasze wieloletnie doświadczenie w branży transportowej
         gwarantuje, że każda przesyłka dotrze na czas i w nienaruszonym stanie.</li>
-        <li><strong>Indywidualne podejście:</strong> Jako właściciel i przedsiębiorca Paweł Bloch osobiście dba o najwyższy  
+        <li><strong>Indywidualne podejście:</strong> Jako właściciel i przedsiębiorca Paweł Bloch osobiście dba o najwyższy
         standard obsługi oraz rozwój oferty, dostosowując ją do specyficznych wymagań każdego klienta.</li>
-        <li><strong>Elastyczność i nowoczesność:</strong> Wykorzystujemy nowoczesne rozwiązania logistyczne, by zapewnić  
+        <li><strong>Elastyczność i nowoczesność:</strong> Wykorzystujemy nowoczesne rozwiązania logistyczne, by zapewnić
         sprawną i efektywną realizację usług transportowych na terenie całego kraju.</li>
       </ul>
     </section>
@@ -144,13 +154,13 @@
     <section>
       <h2>Nasza oferta</h2>
       <p>
-        Oferujemy szeroki wachlarz usług transportowych, w tym przewóz towarów oraz przesyłek krajowych.  
-        Staramy się, aby każda zlecona usługa była wykonywana z najwyższą starannością, zgodnie z obowiązującymi  
+        Oferujemy szeroki wachlarz usług transportowych, w tym przewóz towarów oraz przesyłek krajowych.
+        Staramy się, aby każda zlecona usługa była wykonywana z najwyższą starannością, zgodnie z obowiązującymi
         standardami oraz przepisami prawa.
       </p>
       <p>
-        Zapraszamy do kontaktu – przekonaj się, jak TRANS BLOCH Paweł Bloch może usprawnić transport Twoich towarów  
-        i podnieść efektywność Twojego biznesu. Jesteśmy zawsze gotowi na nowe wyzwania i współpracę,  
+        Zapraszamy do kontaktu – przekonaj się, jak TRANS BLOCH Paweł Bloch może usprawnić transport Twoich towarów
+        i podnieść efektywność Twojego biznesu. Jesteśmy zawsze gotowi na nowe wyzwania i współpracę,
         która przyniesie obopólne korzyści.
       </p>
     </section>
