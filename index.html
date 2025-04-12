@@ -5,72 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRANS BLOCH Paweł Bloch - Profesjonalne Usługi Transportowe</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* RESET CSS (podstawowe wyzerowanie marginesów i paddingu) */
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      box-sizing: border-box;
+    }
+
+    /* Stylowanie BODY z tłem */
+    body {
+      font-family: Arial, sans-serif;
       color: #333;
       line-height: 1.6;
+      /* Tutaj wstaw ścieżkę do swojego obrazu w tle */
+      background: url("trans-bloch-bg.jpg") no-repeat center center fixed;
+      background-size: cover;
     }
+
+    /* Główny kontener ze światłem wokół tekstu */
     .container {
-      max-width: 800px;
-      margin: 30px auto;
-      background: #fff;
-      padding: 20px 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      border-radius: 5px;
+      max-width: 900px;          /* maksymalna szerokość, by treść nie była zbyt rozciągnięta */
+      margin: 60px auto;         /* centrowanie poziome i większy margines z góry i dołu */
+      background-color: rgba(255, 255, 255, 0.95); 
+      padding: 40px;             /* wewnętrzne odstępy od krawędzi kontenera */
+      border-radius: 5px;        /* zaokrąglenie rogów kontenera */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* delikatny cień, by oddzielić kontener od tła */
     }
+
+    /* Wyśrodkowanie sekcji i nagłówków, ale tekst paragrafów wyrównany do lewej */
     header, section, footer {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
+
     header h1 {
       margin-bottom: 10px;
     }
+
     header p {
       font-size: 1.2em;
       margin-bottom: 20px;
     }
-    img.responsive {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      border-radius: 5px;
+
+    section h2, section h3 {
+      margin-bottom: 20px;
     }
-    .section-content {
-      text-align: left;
-      margin: 0 auto;
-      max-width: 750px;
+
+    /* Dodajemy nieco więcej marginesu między akapitami */
+    p {
+      margin-bottom: 20px;
+      text-align: left; /* Wyrównanie treści do lewej dla lepszej czytelności */
     }
-    .section-content ul {
+
+    ul {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
+      text-align: left;
+      margin-left: 0;
+      margin-bottom: 20px;
     }
-    .section-content ul li {
+
+    li {
       margin-bottom: 10px;
     }
+
+    /* Styl dla sekcji kontaktowej – wyróżniona, ale dalej spójna z całością */
     .contact {
-      background: #e9e9e9;
+      background: #efefef;
       padding: 20px;
       border-radius: 5px;
-      text-align: left;
-      max-width: 750px;
-      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+    .contact p {
+      margin-bottom: 10px;
     }
     .contact a {
       color: #333;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
     }
+
     footer p {
       font-size: 0.9em;
       color: #777;
+      margin-bottom: 0;
     }
+
+    /* Responsywność – na ekranach mniejszych od 600px dodatkowo dostosowujemy marginesy i font-size */
     @media (max-width: 600px) {
       .container {
-        padding: 15px 20px;
+        margin: 20px auto;
+        padding: 20px;
       }
       header, section, footer {
         margin-bottom: 20px;
@@ -86,47 +111,48 @@
     <header>
       <h1>TRANS BLOCH Paweł Bloch</h1>
       <p>Profesjonalne usługi transportowe</p>
-      <!-- Osadzony obraz – zastąp URL własnym obrazem -->
-      <img src="https://via.placeholder.com/800x400" alt="Obraz firmy transportowej" class="responsive">
     </header>
 
     <section>
       <h2>O nas</h2>
-      <div class="section-content">
-        <p>
-          Witamy na stronie TRANS BLOCH Paweł Bloch – Twojego partnera w profesjonalnym transporcie. Jesteśmy indywidualną działalnością gospodarczą z siedzibą w Nowej Osuchowej, oferując kompleksowe usługi transportowe dostosowane do potrzeb zarówno klientów indywidualnych, jak i firm.
-        </p>
-        <h3>Dlaczego warto wybrać TRANS BLOCH Paweł Bloch?</h3>
-        <ul>
-          <li><strong>Bezpieczeństwo i terminowość:</strong> Nasze wieloletnie doświadczenie w branży transportowej gwarantuje, że każda przesyłka dotrze na czas i w nienaruszonym stanie.</li>
-          <li><strong>Indywidualne podejście:</strong> Jako właściciel i przedsiębiorca Paweł Bloch osobiście dba o najwyższy standard obsługi oraz rozwój oferty, dostosowując ją do specyficznych wymagań każdego klienta.</li>
-          <li><strong>Elastyczność i nowoczesność:</strong> Wykorzystujemy nowoczesne rozwiązania logistyczne, by zapewnić sprawną i efektywną realizację usług transportowych na terenie całego kraju.</li>
-        </ul>
-      </div>
+      <p>
+        Witamy na stronie TRANS BLOCH Paweł Bloch – Twojego partnera w profesjonalnym transporcie.  
+        Jesteśmy indywidualną działalnością gospodarczą z siedzibą w Nowej Osuchowej, oferując kompleksowe  
+        usługi transportowe dostosowane do potrzeb zarówno klientów indywidualnych, jak i firm.
+      </p>
+      <h3>Dlaczego warto wybrać TRANS BLOCH Paweł Bloch?</h3>
+      <ul>
+        <li><strong>Bezpieczeństwo i terminowość:</strong> Nasze wieloletnie doświadczenie w branży transportowej  
+        gwarantuje, że każda przesyłka dotrze na czas i w nienaruszonym stanie.</li>
+        <li><strong>Indywidualne podejście:</strong> Jako właściciel i przedsiębiorca Paweł Bloch osobiście dba o najwyższy  
+        standard obsługi oraz rozwój oferty, dostosowując ją do specyficznych wymagań każdego klienta.</li>
+        <li><strong>Elastyczność i nowoczesność:</strong> Wykorzystujemy nowoczesne rozwiązania logistyczne, by zapewnić  
+        sprawną i efektywną realizację usług transportowych na terenie całego kraju.</li>
+      </ul>
     </section>
 
     <section class="contact">
       <h2>Kontakt</h2>
-      <div class="section-content">
-        <p><strong>Adres do doręczeń:</strong> Polna 38, 07-308 Nowa Osuchowa</p>
-        <p><strong>Adres rejestrowy:</strong> Polna 38, 07-308 Nowa Osuchowa</p>
-        <p><strong>E-mail:</strong> <a href="mailto:transbloch@gmail.com">transbloch@gmail.com</a></p>
-        <p><strong>Telefon:</strong> 604 071 146</p>
-        <p><strong>NIP:</strong> 7591203275</p>
-        <p><strong>REGON:</strong> 365065502</p>
-      </div>
+      <p><strong>Adres do doręczeń:</strong> Polna 38, 07-308 Nowa Osuchowa</p>
+      <p><strong>Adres rejestrowy:</strong> Polna 38, 07-308 Nowa Osuchowa</p>
+      <p><strong>E-mail:</strong> <a href="mailto:transbloch@gmail.com">transbloch@gmail.com</a></p>
+      <p><strong>Telefon:</strong> 604 071 146</p>
+      <p><strong>NIP:</strong> 7591203275</p>
+      <p><strong>REGON:</strong> 365065502</p>
     </section>
 
     <section>
       <h2>Nasza oferta</h2>
-      <div class="section-content">
-        <p>
-          Oferujemy szeroki wachlarz usług transportowych, w tym przewóz towarów oraz przesyłek krajowych. Staramy się, aby każda zlecona usługa była wykonywana z najwyższą starannością, zgodnie z obowiązującymi standardami oraz przepisami prawa.
-        </p>
-        <p>
-          Zapraszamy do kontaktu – przekonaj się, jak TRANS BLOCH Paweł Bloch może usprawnić transport Twoich towarów i podnieść efektywność Twojego biznesu. Jesteśmy zawsze gotowi na nowe wyzwania i współpracę, która przyniesie obopólne korzyści.
-        </p>
-      </div>
+      <p>
+        Oferujemy szeroki wachlarz usług transportowych, w tym przewóz towarów oraz przesyłek krajowych.  
+        Staramy się, aby każda zlecona usługa była wykonywana z najwyższą starannością, zgodnie z obowiązującymi  
+        standardami oraz przepisami prawa.
+      </p>
+      <p>
+        Zapraszamy do kontaktu – przekonaj się, jak TRANS BLOCH Paweł Bloch może usprawnić transport Twoich towarów  
+        i podnieść efektywność Twojego biznesu. Jesteśmy zawsze gotowi na nowe wyzwania i współpracę,  
+        która przyniesie obopólne korzyści.
+      </p>
     </section>
 
     <footer>
